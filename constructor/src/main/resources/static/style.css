@@ -1,0 +1,32 @@
+body {
+	background-color:#00A779;
+}
+div{
+    background-color: #FF5C00;
+}
+.table{
+    font-family: Georgia, "Times New Roman";
+    font-size: 20px;
+    line-height: 30px;
+    width: 60%; /* Ширина таблицы */
+    margin: auto; /* Выравниваем таблицу по центру */
+    border: 3px solid;
+    border-color: #FF5C00;
+    border-radius : 35px;
+    background: WhiteSmoke;
+    table-layout: fixed;
+}
+tr{
+border: 1px solid #FF5C00 ;
+}
+td{
+text-align: center;
+}
+P{
+text-align: center;
+font-family: Georgia, "Times New Roman";
+border-color: #FF5C00;
+background: WhiteSmoke;
+margin-top: 0px;
+margin-bottom: 0px;
+}

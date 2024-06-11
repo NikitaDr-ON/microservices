@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="_csrf" content="${_csrf.token}"/>
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
+    <title>Title</title>
+    <link rel="icon"  th:href="@{/constructor/logo.png}">
+    <link rel="stylesheet" th:href="@{/constructor/style.css}">
+</head>
+<body>
+<ul>
+    <li> <div class="dropdown">
+        <button class="dropbtn">products
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="http://localhost:8083/store/products">all</a>
+            <a href="http://localhost:8083/store/products/cpu">cpu</a>
+            <a href="http://localhost:8083/store/products/gpu">gpu</a>
+            <a href="http://localhost:8083/store/products/ram">ram</a>
+            <a href="http://localhost:8083/store/products/power">psu</a>
+            <a href="http://localhost:8083/store/products/motherboard">motherboard</a>
+            <a href="http://localhost:8083/store/products/body">case</a>
+            <a href="http://localhost:8083/store/products/ssd">ssd</a>
+            <a href="http://localhost:8083/store/products/cooler">cooler</a>
+        </div>
+    </div></li>
+    <li><a href="http://localhost:8083/store/privateOffice">private office</a></li>
+    <li><a href="http://localhost:8083/store/order">my order</a></li>
+    <li><a href="http://localhost:8083/constructor">constructor</a></li>
+</ul>
+<table class = "table" th:object="${order}">
+<tr>
+    <td>
+        <a href="http://localhost:8083/constructor/products/gpu">
+            <img src="/constructor/gpu.png" width="150" height="150">
+        </a>
+    </td>
+    <td><p>gpu</p></td>
+    <td th:text="${order.getGpu()} ?: 'not found'"></td>
+    <td><form th:action="@{/constructor/deleteFromOrder}" method="post">
+        <input name="order" th:value="${order.getId()}" hidden>
+        <button th:if="${order.getGpu()}" th:value="${order.getGpu().getId()}" name="product">delete</button>
+    </form></td>
+</tr>
+    <tr>
+        <td>
+            <a  href="http://localhost:8083/constructor/products/cpu">
+                <img src="/constructor/cpu.png" width="150" height="150">
+            </a>
+        </td>
+        <td><p>cpu</p></td>
+        <td th:text="${order.getCpu()}  ?: 'not found'"></td>
+        <td><form th:action="@{/constructor/deleteFromOrder}" method="post">
+            <input name="order" th:value="${order.getId()}" hidden>
+            <button th:if="${order.getCpu()}" th:value="${order.getCpu().getId()}" name="product">delete</button>
+        </form></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="http://localhost:8083/constructor/products/power">
+                <img src="/constructor/power.png" width="150" height="150">
+            </a>
+        </td>
+        <td><p>psu</p></td>
+        <td th:text="${order.getPsu()}  ?: 'not found'"></td>
+        <td><form th:action="@{/constructor/deleteFromOrder}" method="post">
+            <input name="order" th:value="${order.getId()}" hidden>
+            <button th:if="${order.getPsu()}" th:value="${order.getPsu().getId()}" name="product">delete</button>
+        </form></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="http://localhost:8083/constructor/products/ram">
+                <img src="/constructor/ram.png" width="150" height="150">
+            </a>
+        </td>
+        <td><p>ram</p></td>
+        <td th:text="${order.getRam()}  ?: 'not found'"></td>
+        <td><form th:action="@{//constructor/deleteFromOrder}" method="post">
+            <input name="order" th:value="${order.getId()}" hidden>
+            <button th:if="${order.getRam()}" th:value="${order.getRam().getId()}" name="product">delete</button>
+        </form></td>
+    </tr>
+    <tr>
+        <td>
+
+            <a href="http://localhost:8083/constructor/products/motherboard">
+                <img src="/constructor/motherboard.png" width="150" height="150">
+            </a>
+        </td>
+        <td><p>motherboard</p></td>
+        <td th:text="${order.getMotherboard()}  ?: 'not found'"></td>
+        <td><form th:action="@{/constructor/deleteFromOrder}" method="post">
+            <input name="order" th:value="${order.getId()}" hidden>
+            <button th:if="${order.getMotherboard()}" th:value="${order.getMotherboard().getId()}" name="product">delete</button>
+        </form></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="http://localhost:8083/constructor/products/body">
+                <img src="/constructor/body.png" width="150" height="150">
+            </a>
+        </td>
+        <td><p>case</p></td>
+        <td th:text="${order.getBody()}  ?: 'not found'"></td>
+        <td><form th:action="@{/constructor/deleteFromOrder}" method="post">
+            <input name="order" th:value="${order.getId()}" hidden>
+            <button th:if="${order.getBody()}" th:value="${order.getBody().getId()}" name="product">delete</button>
+        </form></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="http://localhost:8083/constructor/products/ssd">
+                <img src="/constructor/ssd.png" width="150" height="150">
+            </a>
+        </td>
+        <td><p>ssd/hdd</p></td>
+        <td th:text="${order.getSsd()}  ?: 'not found'"></td>
+        <td><form th:action="@{//constructor/deleteFromOrder}" method="post">
+            <input name="order" th:value="${order.getId()}" hidden>
+            <button th:if="${order.getSsd()}" th:value="${order.getSsd().getId()}" name="product">delete</button>
+        </form></td>
+    </tr>
+    <tr>
+        <td>
+
+            <a href="http://localhost:8083/constructor/products/cooler">
+                <img src="/constructor/cooler.png" width="150" height="150">
+            </a>
+        </td>
+        <td><p>cooler</p></td>
+        <td th:text="${order.getCooler()}  ?: 'not found'"></td>
+        <td><form th:action="@{/constructor/deleteFromOrder}" method="post">
+            <input name="order" th:value="${order.getId()}" hidden>
+            <button th:if="${order.getCooler()}" th:value="${order.getCooler().getId()}" name="product">delete</button>
+        </form></td>
+    </tr>
+</table>
+<p th:text="${cpuAndMotherboard}"></p>
+<p th:text="${gpuAndPsu}"></p>
+<p th:text="${cpuAndCooler}"></p>
+<p th:text="${motherboardAndRam}"></p>
+<p th:text="${motherboardAndRamModules}"></p>
+<p th:text="${motherboardAndCase}"></p>
+<form th:action="@{/orderComplete}" method="post">
+    <button>checkout</button>
+</form>
+</body>
+</html>
