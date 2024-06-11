@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/addSsd}" method="post">
+
+  <select name="capacity">
+    <option disabled>capacity</option>
+    <option  value="128">128gb</option>
+    <option  value="256">256gb</option>
+    <option  value="512">512gb</option>
+    <option  value="1024">1tb</option>
+  </select>
+
+  <select name="maximumDataTransferRate">
+    <option disabled>maximum data transfer rate</option>
+    <option  value="500">500mb/s</option>
+    <option  value="600">600mb/s</option>
+    <option  value="1500">1500mb/s</option>
+    <option  value="2000">2000mb/s</option>
+    <option  value="3000">3000mb/s</option>
+  </select>
+
+
+  <input type="text" name="modelName" placeholder="name of model"/>
+  <input type="text" name="dealer" placeholder="dealer"/>
+  <input type="number" name="price" placeholder="price"/>
+  <button type="submit">add</button>
+</form>
+</body>
+</html>

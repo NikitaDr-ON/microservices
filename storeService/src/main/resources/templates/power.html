@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="icon"  th:href="@{/store/logo.png}">
+  <link rel="stylesheet" th:href="@{/store/style.css}">
+  <title>Power</title>
+</head>
+<body>
+<ul>
+  <li> <div class="dropdown">
+    <button class="dropbtn">products
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="http://localhost:8083/store/products">all</a>
+      <a href="http://localhost:8083/store/products/cpu">cpu</a>
+      <a href="http://localhost:8083/store/products/gpu">gpu</a>
+      <a href="http://localhost:8083/store/products/ram">ram</a>
+      <a href="http://localhost:8083/store/products/power">psu</a>
+      <a href="http://localhost:8083/store/products/motherboard">motherboard</a>
+      <a href="http://localhost:8083/store/products/body">case</a>
+      <a href="http://localhost:8083/store/products/ssd">ssd</a>
+      <a href="http://localhost:8083/store/products/cooler">cooler</a>
+    </div>
+  </div></li>
+  <li><a href="http://localhost:8083/store/privateOffice">private office</a></li>
+  <li><a href="http://localhost:8083/store/order">my order</a></li>
+  <li><a href="http://localhost:8083/constructor">constructor</a></li>
+</ul>
+<table class = "table">
+  <tr th:each="el : ${products}">
+    <td> <a th:href="'/store/products/gpu/'+${el.getId()}">
+      <img src="/store/power.png" width="150" height="150"></a>
+    </td>
+    <td th:utext="${el.getName()}"></td>
+    <td th:utext="${el.getPrice()}"></td>
+  </tr>
+</table>
+</body>
+</html>

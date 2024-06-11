@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/addRam}" method="post">
+
+  <select name="numberOfModules">
+    <option disabled>number of modules</option>
+    <option  value="1">1</option>
+    <option  value="2">2</option>
+  </select>
+
+  <select name="memoryType">
+    <option disabled>memory type</option>
+    <option  value="DDR2">DDR2</option>
+    <option  value="DDR3">DDR3</option>
+    <option  value="DDR3L">DDR3L</option>
+    <option  value="DDR4">DDR4</option>
+    <option  value="DDR5">DDR5</option>
+  </select>
+
+  <select name="clockFrequency">
+    <option disabled>clock frequency</option>
+    <option  value="800">800Gzh</option>
+    <option  value="1333">1333Gzh</option>
+    <option  value="1600">1600Gzh</option>
+    <option  value="1866">1866Gzh</option>
+    <option  value="2400">2400Gzh</option>
+    <option  value="2666">2666Gzh</option>
+    <option  value="2933">2933Gzh</option>
+    <option  value="3200">3200Gzh</option>
+    <option  value="3600">3600Gzh</option>
+    <option  value="3733">3733Gzh</option>
+    <option  value=""></option>
+  </select>
+
+  <select name="volumeOfOneMemoryModule">
+    <option disabled>volume of one memory module</option>
+    <option  value="2">2gb</option>
+    <option  value="4">4gb</option>
+    <option  value="8">8gb</option>
+    <option  value="16">16gb</option>
+    <option  value="24">24gb</option>
+    <option  value="32">32gb</option>
+  </select>
+
+  <input type="text" name="modelName" placeholder="name of model"/>
+  <input type="text" name="dealer" placeholder="dealer"/>
+  <input type="number" name="price" placeholder="price"/>
+  <button type="submit">add</button>
+</form>
+</body>
+</html>
