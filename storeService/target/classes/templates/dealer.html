@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>dealers</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p>dealers</p>
+<div>
+    <div th:each="el : ${dealer}">
+        <h3>
+            <p th:text="${el.getPrice()}"></p>
+            <p th:text="${el.getToDelivery()}"></p>
+            <p th:text="${el.getOrderDate()}"></p>
+            <p th:text="${el.isComplete()}"></p>
+
+        </h3>
+    </div>
+</div>
+</body>
+</html>

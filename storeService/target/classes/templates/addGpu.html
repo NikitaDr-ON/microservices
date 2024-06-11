@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/addGpu}" method="post">
+
+    <select name="videoMemoryCapacity">
+        <option disabled>select video memory capacity</option>
+        <option  value="1gb">1gb</option>
+        <option  value="2gb">2gb</option>
+        <option  value="4gb">4gb</option>
+        <option  value="6gb">6gb</option>
+        <option  value="8gb">8gb</option>
+        <option  value="10gb">10gb</option>
+        <option  value="12gb">12gb</option>
+    </select>
+
+    <select name="memoryType">
+        <option disabled>memory type</option>
+        <option  value="DDR3">DDR3</option>
+        <option  value="DDR4">DDR4</option>
+        <option  value="GDDR3">GDDR3</option>
+        <option  value="GDDR5">GDDR5</option>
+        <option  value="GDDR6">GDDR6</option>
+        <option  value="GDDR6X">GDDR6X</option>
+    </select>
+
+    <select name="typeAndNumberOfFans">
+        <option disabled>type and number of fans</option>
+        <option  value="1 centrifugal">1 centrifugal</option>
+        <option  value="1 axial">1 axial</option>
+        <option  value="2 axial">2 axial</option>
+        <option  value="3 axial">2 axial</option>
+        <option  value="Not">Not</option>
+    </select>
+
+    <select name="recommendedPowerSupply">
+        <option disabled>gpu</option>
+        <option  value="300">300W</option>
+        <option  value="450">450W</option>
+        <option  value="500">500W</option>
+        <option  value="550">550W</option>
+        <option  value="650">650W</option>
+        <option  value="750">750W</option>
+    </select>
+
+    <select name="gpu">
+        <option disabled>recommended power supply</option>
+        <option  value="NVIDIA">NVIDIA</option>
+        <option  value="AMD">AMD</option>
+        <option  value="Intel">Intel</option>
+        <option  value="Matrox">Matrox</option>
+    </select>
+
+    <input type="text" name="modelName" placeholder="name of model"/>
+    <input type="text" name="dealer" placeholder="dealer"/>
+    <input type="number" name="price" placeholder="price"/>
+    <button type="submit">add</button>
+</form>
+</body>
+</html>

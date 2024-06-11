@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/addCpu}" method="post">
+
+    <select name="socket">
+        <option disabled>select socket</option>
+        <option  value="am5">AM5</option>
+        <option  selected value="am4">AM4</option>
+        <option  value="lga1700">lga1700</option>
+        <option  value="lga1200">lga1200</option>
+    </select>
+
+    <select name="countOfCore">
+        <option disabled>count Of core</option>
+        <option  value="2-core">2</option>
+        <option  value="4-core">4</option>
+        <option  value="6-core">6</option>
+        <option  value="8-core">8</option>
+        <option  value="10-core">10</option>
+        <option  value="12-core">12</option>
+        <option  value="12-core">14</option>
+    </select>
+
+    <select name="l2cash">
+        <option disabled>l3 cash</option>
+        <option  value="3 mb">3 mb</option>
+        <option  value="4 mb">4 mb</option>
+        <option  value="6 mb">6 mb</option>
+        <option  value="8 mb">8 mb</option>
+        <option  value="10 mb">10 mb</option>
+        <option  value="12 mb">12 mb</option>
+        <option  value="16 mb">16 mb</option>
+    </select>
+
+    <select name="l3cash">
+        <option disabled>l3 cash</option>
+        <option  value="3 mb">3 mb</option>
+        <option  value="4 mb">4 mb</option>
+        <option  value="6 mb">6 mb</option>
+        <option  value="8 mb">8 mb</option>
+        <option  value="10 mb">10 mb</option>
+        <option  value="12 mb">12 mb</option>
+        <option  value="16 mb">16 mb</option>
+    </select>
+
+  <input type="text" name="ghz" placeholder="Ghz"/>
+  <input type="text" name="modelName" placeholder="name of model"/>
+  <input type="text" name="dealer" placeholder="dealer"/>
+    <input type="number" name="price" placeholder="price"/>
+  <button type="submit">add</button>
+</form>
+</body>
+</html>

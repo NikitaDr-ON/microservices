@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/addMotherboard}" method="post">
+
+    <select name="socket">
+        <option disabled>select socket</option>
+        <option  value="am5">AM5</option>
+        <option  selected value="am4">AM4</option>
+        <option  value="lga1700">lga1700</option>
+        <option  value="lga1200">lga1200</option>
+    </select>
+
+    <select name="formFactor">
+        <option disabled>form factor</option>
+        <option  value="E-ATX">E-ATX</option>
+        <option  value="Standart-ATX">Standart-ATX</option>
+        <option  value="Micro-ATX">Micro-ATX</option>
+        <option  value="MINI-ITX">MINI-ITX</option>
+    </select>
+
+    <select name="supportedMemoryType">
+        <option disabled>supported memory type</option>
+        <option  value="DDR2">DDR2</option>
+        <option  value="DDR3">DDR3</option>
+        <option  value="DDR4">DDR4</option>
+        <option  value="DDR5">DDR5</option>
+    </select>
+
+    <select name="numberOfMemorySlots">
+        <option disabled>number of memory slots</option>
+        <option  value="1">1</option>
+        <option  value="2">2</option>
+        <option  value="4">4</option>
+        <option  value="8">8</option>
+    </select>
+
+    <input type="text" name="modelName" placeholder="name of model"/>
+    <input type="text" name="dealer" placeholder="dealer"/>
+    <input type="number" name="price" placeholder="price"/>
+    <button type="submit">add</button>
+</form>
+</body>
+</html>

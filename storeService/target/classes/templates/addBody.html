@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/addBody}" method="post">
+
+  <select name="caseSize">
+    <option disabled>case size</option>
+    <option  value="Full-Tower">Full-Tower</option>
+    <option  value="Mid-Tower">Mid-Tower</option>
+    <option  value="Mini-Tower">Mini-Tower</option>
+    <option  value="Slim">Slim</option>
+    <option  value="SFF">SFF</option>
+  </select>
+
+  <select name="formFactorOfCompatibleBoards">
+    <option disabled>form factor of compatible boards</option>
+    <option  value="E-ATX">E-ATX</option>
+    <option  value="Standart-ATX">Standart-ATX</option>
+    <option  value="Micro-ATX">Micro-ATX</option>
+    <option  value="MINI-ITX">MINI-ITX</option>
+  </select>
+
+  <select name="powerSupplyPlacement">
+    <option disabled>power supply placement</option>
+    <option  value="top">top</option>
+    <option  value="bottom">bottom</option>
+    <option  value="hidden">hidden</option>
+    <option  value=""></option>
+  </select>
+
+
+  <input type="text" name="modelName" placeholder="name of model"/>
+  <input type="text" name="dealer" placeholder="dealer"/>
+  <input type="number" name="price" placeholder="price"/>
+  <button type="submit">add</button>
+</form>
+</body>
+</html>

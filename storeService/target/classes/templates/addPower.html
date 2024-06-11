@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/addPower}" method="post">
+
+  <select name="formFactor">
+    <option disabled>form factor</option>
+    <option  value="ATX">ATX</option>
+    <option  value="SFX">SFX</option>
+    <option  value="TFX">TFX</option>
+  </select>
+
+  <select name="power">
+    <option disabled>power</option>
+    <option  value="400">400W</option>
+    <option  value="450">450W</option>
+    <option  value="500">500W</option>
+    <option  value="550">550W</option>
+    <option  value="600">600W</option>
+    <option  value="650">650W</option>
+    <option  value="700">700W</option>
+    <option  value="750">750W</option>
+  </select>
+
+  <select name="mainPowerConnector">
+    <option disabled>main power connector</option>
+    <option  value="20+4 pin">20+4 pin</option>
+    <option  value="24 pin">24 pin</option>
+  </select>
+
+  <input type="text" name="modelName" placeholder="name of model"/>
+  <input type="text" name="dealer" placeholder="dealer"/>
+  <input type="number" name="price" placeholder="price"/>
+  <button type="submit">add</button>
+</form>
+</body>
+</html>

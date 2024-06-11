@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/addCooler}" method="post">
+
+  <select name="BaseMaterial">
+    <option disabled>base material</option>
+    <option  value="aluminum">aluminum</option>
+    <option  value="aluminum/copper">aluminum/copper</option>
+    <option  value="copper">copper</option>
+  </select>
+
+  <select name="socket">
+    <option disabled>select socket</option>
+    <option  value="am5">AM5</option>
+    <option  value="am4">AM4</option>
+    <option  value="lga1700">lga1700</option>
+    <option  value="lga1200">lga1200</option>
+  </select>
+
+  <select name="powerDissipation">
+    <option disabled>power dissipation</option>
+    <option  value="65">65W</option>
+    <option  value="75">75W</option>
+    <option  value="82">82W</option>
+    <option  value="95">95W</option>
+    <option  value="100">100W</option>
+    <option  value="105">105W</option>
+    <option  value="110">110W</option>
+    <option  value="120">120W</option>
+    <option  value="125">125W</option>
+    <option  value="130">130w</option>
+    <option  value=""></option>
+  </select>
+
+  <select name="numberOfHeatPipes">
+    <option disabled>number of heat pipes</option>
+    <option  value="2">2</option>
+    <option  value="3">3</option>
+    <option  value="4">4</option>
+    <option  value="5">5</option>
+    <option  value="6">6</option>
+    <option  value="7">7</option>
+    <option  value="Not">not</option>
+  </select>
+
+  <input type="text" name="modelName" placeholder="name of model"/>
+  <input type="text" name="dealer" placeholder="dealer"/>
+  <input type="number" name="price" placeholder="price"/>
+  <button type="submit">add</button>
+</form>
+</body>
+</html>
